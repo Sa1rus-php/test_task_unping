@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
     };
 
     var url = 'http://localhost:5555/index.php';
-    var url_2 = 'https://webhook.site/56ba2f21-1a3a-40c5-9dbc-1c675db40a9b';
+    var url_2 = 'http://webhook.site/56ba2f21-1a3a-40c5-9dbc-1c675db40a9b';
 
     // Starting Web API Call.
     var response = await http.post(
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: data,
     );
     var response_2 = await http.post(
-      Uri.parse(url),
+      Uri.parse(url_2),
       body: data,
     );
 
@@ -95,27 +95,8 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 16.0);
       }
     }
-    if (response_2.statusCode == 200) {
-      var message = json.decode(response_2.body);
-      if (message == "Error") {
-        Fluttertoast.showToast(
-            msg: "This Company Already Exit!",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.CENTER,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0);
-      } else {
-        Fluttertoast.showToast(
-            msg: "Registation Successful!",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.CENTER,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0);
-      }
+    if (response_2.body.isNotEmpty) {
+      json.decode(response_2.body);
     }
   }
 
