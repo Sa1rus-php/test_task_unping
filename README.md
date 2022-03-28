@@ -1,16 +1,10 @@
-# flutter_application
+# Flutter + PHP - test task for Unping
 
-A new Flutter project.
 
-## Getting Started
+## Questions and answers
 
-This project is a starting point for a Flutter application.
+1)Describe possible performance optimizations for your Code?
+2)When you have to do this task again - what would you do differently?
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1)That to optimize my code I need to change the validation in the last step
+2)I would change the button functions and add a better validation
